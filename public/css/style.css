@@ -1,0 +1,248 @@
+/*start adminLTE changes*/
+
+body:not(.sidebar-mini-md) .content-wrapper, body:not(.sidebar-mini-md) .main-footer, body:not(.sidebar-mini-md) .main-header {
+    margin-left: 0px;
+}
+@media (min-width: 768px) {
+    body:not(.sidebar-mini-md) .content-wrapper,
+    body:not(.sidebar-mini-md) .main-footer,
+    body:not(.sidebar-mini-md) .main-header {
+        margin-left: 0px;
+    }
+}
+/*change head right inndent*/
+.layout-navbar-fixed .wrapper .main-header{
+right: 29px;
+}
+
+/*end adminLTE changes*/
+
+/*register page changes*/
+.register-logo{
+    max-width: 100%;
+    max-height: 100%;
+    position: static;
+}
+
+
+
+/* start dropdown menu navpar */
+.profile-nav-image{
+    border-radius: 50%!important;
+    max-width: 70%;
+    left: 50%;
+    margin-left: -75px;
+    position: absolute;
+    top: -12px;
+}
+.dropdown-nav-image{
+    border-radius: 50%!important;
+    z-index: 5;
+    height: 90px;
+    width: 90px;
+    border: 3px solid;
+    border-color: transparent;
+     text-align: center;
+    border-color: rgba(255,255,255,0.2);
+}
+.dropdown-sign-out{
+    left: auto;
+    text-align: center;
+    width: 280px;
+    border: 1px solid #ddd;
+    background: #fff;
+    background-color: #3c8dbc;
+
+}
+.logo{
+    background-color: rgba(255,255,255,.2);
+    color: #fff;
+    border-bottom: 0 solid transparent;
+    -webkit-transition: width .3s ease-in-out;
+    -o-transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    display: block;
+    float: left;
+    height: 56px;
+    font-size: 20px;
+    line-height: 56px;
+    text-align: center;
+    width: 259px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 0 15px;
+    font-weight: 300;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+.navbar-toggler{
+    margin-right: 194px;
+}
+
+.main-header{
+    padding: 8px;
+    z-index: 1000;
+    border-width: 0;
+
+}
+.user-menu > a{
+    color: rgba(255,255,255,.75);
+}
+.user-menu > a:hover{
+    color: #ffffff;
+}
+/* end  dropdown menu navpar */
+
+/* start setting sidebar */
+
+.settings-box{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    background-color: #343a40;
+    z-index: 500;
+    transition: 0.3s;
+    line-height: 2.7;
+    text-align: right;
+    direction: rtl;
+
+}
+
+
+.chiller-theme .sidebar-footer{
+    bottom: 0px;
+}
+.sidebar-content{
+    top: 50px;
+}
+.user-panel, .user-panel .info{
+    top: 2px;
+}
+/* style to hide setting-box */
+.user-panel img{
+    width: 4rem;
+    margin: 9px 9px 0 0;
+    border-radius: 50%;
+}
+.toggle-settings{
+    position: absolute;
+    left: -32px;
+    top: 0px;
+    background-color: #343a40;
+    color: #fff;
+    padding: 1px;
+    font-size: 20px;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    padding-right: 17px;
+    padding-left: 6px;
+}
+
+.navbar-ul-most-right{
+    text-align: right;
+
+}
+.navbar-ul-right{
+    text-align: right;
+    margin-right: 30px;
+
+}
+.a-font-color{
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+}
+.a-font-color:hover{
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    padding: 3px;
+
+}
+.setting-li:hover{
+    outline: 0;
+    background: red;
+    display: block;
+    border-radius: 4px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+}
+.li-selected{
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    outline: 0;
+    background: #337ab7;
+    display: block;
+    border-radius: 4px;
+    padding: 3px;
+}
+ul{
+    list-style-type: none;
+}
+/* end setting sidebar */
+
+/* start hidden border button  */
+.fabutton {
+    background: none;
+    padding: 0px;
+    border: none;
+}
+.btn-group-sm>.btn, .btn-sm{
+    font-size: 1.1rem;
+}
+/* end hidden border button */
+
+/* strat alert  */
+.alert{
+    z-index: 99;
+    top: 60px;
+    right:18px;
+    min-width:30%;
+    position: fixed;
+    animation: slide 0.5s forwards;
+}
+
+@keyframes slide {
+    100% { top: 30px; }
+}
+@media screen and (max-width: 668px) {
+    .alert{ /* center the alert on small screens */
+        left: 10px;
+        right: 10px;
+    }
+}
+table td[class*=col-], table th[class*=col-] {
+    position: static;
+    display: table-cell;
+    float: none;
+}
+/* end alert */
+
+/* start head navbar setting */
+.navbar-ml{
+    margin-right: 24px;
+}
+
+.dropdown-item {
+    color: rgba(255, 255, 255, 0.5);
+}
+.dropdown-item:hover {
+    background-color: #343a40 !important;
+    color: rgba(255, 255, 255, 0.7);
+}
+.dropdown-menu-right{
+    text-align: right;
+    background-color: #343a40 !important;
+    top: 49px;
+}
+.dropdown-menu.show {
+    text-align: right;
+    background-color: #343a40 !important;
+    left: 0px;
+}
+
+
+/* end head navbar setting */
