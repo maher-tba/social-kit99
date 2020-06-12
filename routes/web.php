@@ -61,7 +61,9 @@ Route::group(['middleware' => [
 });
 Route::post('/send', 'GraphController@publishToPage')->name('message.send');
 
+//sign up to Facebook to get basic information to register like name, photo and email
 Route::get('/redirect/{service}','SocialController@redirect');
+
 Route::get('/callback/facebook','SocialController@callback');
 
 

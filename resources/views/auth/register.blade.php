@@ -10,7 +10,7 @@
             <div class="col-md-4 col-lg-4 mt-5 ">
                 <div class="register-box">
                     <div class="register-logo">
-                        <b class="text-blue">سوشل</b>كيت
+                        <b class="text-blue">سوشل</b>&nbsp;كيت
                     </div>
                     <form method="POST" action="{{route('register')}}">
                         @csrf
@@ -66,11 +66,12 @@
                                         </div>
                                         <!-- /.col -->
                                     </div>
-                                    
+
 
                                 </form>
                                 <div class="social-auth-links text-center">
                                     <p>- OR -</p>
+{{--                                    order facebook registration info--}}
                                     <a href="{{url('/redirect/facebook')}}" class="btn btn-block btn-primary">
                                         <i class="fab fa-facebook mr-2"></i>
                                         تسجيل باستخدام Facebook

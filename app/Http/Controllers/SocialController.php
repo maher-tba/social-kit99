@@ -12,15 +12,9 @@ use Laravel\Socialite\Facades\Socialite;
 
 class SocialController extends Controller
 {
-    protected $fb;
-    public function __construct()
-    {
-
-    }
-
+    //make request to Facebook or twitter or etc "$service" to get user data
     public function redirect($service){
-
-        return Socialite::driver('facebook')->redirect();
+        return Socialite::driver($service)->redirect();
     }
 
     public function callback($provider = "facebook"){
