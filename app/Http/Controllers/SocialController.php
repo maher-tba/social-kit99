@@ -13,23 +13,17 @@ use Laravel\Socialite\Facades\Socialite;
 class SocialController extends Controller
 {
     //make request to Facebook or twitter or etc "$service" to get user data
+    // initialize Socialite with default value
     public function redirect($service){
         return Socialite::driver($service)->redirect();
     }
 
     public function callback($provider = "facebook"){
 
-        $providerUser = Socialite::driver($provider)->stateless()->user() ;
+        $Socialite = Socialite::driver($provider) ;
+        dd($Socialite);
         $user = $this->createOrGetUser($provider, $providerUser);
-        /*$user = User::updateOrCreate(
-            [
-                'email' => $auth_user->email
-            ],
-            [
-                'token' => $auth_user->token,
-                'name'  => $auth_user->name
-            ]
-        );*/
+
         Auth::login($user, true);
 
         return redirect()->to('/home');
