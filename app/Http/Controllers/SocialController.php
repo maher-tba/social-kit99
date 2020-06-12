@@ -22,9 +22,9 @@ class SocialController extends Controller
 
         $Socialite = Socialite::driver($provider) ;
         dd($Socialite);
-        $user = $this->createOrGetUser($provider, $providerUser);
-
-        Auth::login($user, true);
+//        $user = $this->createOrGetUser($provider, $providerUser);
+//
+//        Auth::login($user, true);
 
         return redirect()->to('/home');
     }
