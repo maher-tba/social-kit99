@@ -18,16 +18,13 @@ class GraphController extends Controller
     public function __construct(Facebook $fb)
     {
         $this->middleware(function ($request, $next) use ($fb) {
-            //todo check if token vaild
-            if(isset(Auth::user()->email)){
-                if(isset(Auth::user()->token)){
-                    $fb->setDefaultAccessToken(Auth::user()->token);
-                    $this->api = $fb;
-                }
-                return $next($request);
+            if(isset(Auth::user()->token)){
+                $fb->setDefaultAccessToken(Auth::user()->token);
+                $this->api = $fb;
             }
-            return redirect(route(register));
-
+            else
+                return redirect(route(register));
+            return $next($request);
         });
     }
 
