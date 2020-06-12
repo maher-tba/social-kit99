@@ -51,13 +51,17 @@ class SocialController extends Controller
 
     public function createOrGetUser($provider, $providerUser)
     {
+        //get user by provider user id
         $account = Social::whereProvider($provider)
             ->whereProviderUserId($providerUser->getId())
             ->first();
-
+        //IF ACCOUNT IN DB
         if ($account) {
             return $account->user;
+            //social account NOT registered yet
         } else {
+            //before create social
+            //get user from db
             $user = User::whereEmail($providerUser->getEmail())->first();
             if (!$user) {
                 $user = User::create([
@@ -68,11 +72,13 @@ class SocialController extends Controller
                 ]);
 
             }
+            // now create social
             $account = new Social([
                 'provider_user_id' => $providerUser->getId(),
                 'provider' => 'facebook'
             ]);
 
+            //attach user with social account
             $account->user()->associate($user);
             $account->save();
 
