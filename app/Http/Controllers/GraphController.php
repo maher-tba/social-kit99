@@ -22,8 +22,6 @@ class GraphController extends Controller
                 $fb->setDefaultAccessToken(Auth::user()->token);
                 $this->api = $fb;
             }
-            else
-                return redirect(route(register));
             return $next($request);
         });
     }
