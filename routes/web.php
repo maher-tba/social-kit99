@@ -39,10 +39,6 @@ Route::resource('users','UsersController')->except([
     'show'
 ]);
 
-Route::post('/modal_create_post', 'SocialController@modal_create_post');
-Route::post('/modal_create_twitte', 'SocialController@modal_create_twitte');
-
-
 ############### start social Route #########################
 
 // Route::get('/home', 'GraphController@retrieveUserPages')->name('home');

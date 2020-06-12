@@ -19,23 +19,19 @@ class SocialController extends Controller
     }
 
     public function callback($provider = "facebook"){
+        // get response from Facebook or twitter or etc "$service" to init Socialite,
+        //We need from response now access to protected method to get User information 'stateless()'
+        $providerUser = Socialite::driver($provider)->stateless()->user() ;
 
-        $Socialite = Socialite::driver($provider) ;
-        dd($Socialite);
-//        $user = $this->createOrGetUser($provider, $providerUser);
-//
-//        Auth::login($user, true);
+        // get or create user from database
+        $user = $this->createOrGetUser($provider, $providerUser);
+
+        //login with this user
+        Auth::login($user, true);
 
         return redirect()->to('/home');
     }
 
-    public function  modal_create_post(){
-
-        $pages = explode(".", Auth::user()->pages);
-        $ids = explode(".", Auth::user()->ids);
-
-        return view('socials.modal_create_post',compact('pages','ids'));
-    }
 
     public function createOrGetUser($provider, $providerUser)
     {

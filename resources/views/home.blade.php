@@ -12,17 +12,7 @@
     <!-- Ionicons -->
     <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Bootstrap 3.3.2 -->
-{{--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">--}}
-{{--    <!-- Font Awesome Icons -->--}}
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-{{--    <!-- Ionicons -->--}}
-{{--    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />--}}
-{{--    <!-- Theme style -->--}}
-{{--    <link href="{{ asset("dist/css/AdminLTE.min.css")}}" rel="stylesheet" type="text/css" />--}}
-
-{{--    <!-- DataTables -->--}}
-{{--    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />--}}
-
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,17 +24,6 @@
 
 @section('content')
     <!-- Content Header (Page header) -->
-{{--first name =  {{$user_info['first_name']}}--}}
-    {{--    width =  {{$user_info['width']}}--}}
-    {{--    height =  {{$user_info['height']}}--}}
-    {{--    <img src="{{$user_info['url']}}" alt="user imag" class="dropdown-nav-image">--}}
-
-
-{{--    @foreach($userPages as $page)--}}
-{{--        page name {{$page["name"]}}--}}
-{{--    @endforeach--}}
-
-
     <section class="content ">
         <div class="row">
 
@@ -58,22 +37,8 @@
                     <i class="fa fa-facebook"></i>
                 </div>
                 <a href="#" class="small-box-footer">post now <i class="fa fa-arrow-circle-right"></i></a>
-{{--                <a href="#" class="modalCreatePost pull-right " data-toggle="modal" data-target="#modalCreatePost"><i class="fa fa-facebook">&nbsp; نشر في</i></a>--}}
             </div>
-            <!-- ./col -->
-        {{--            <div class="small-box col-lg-4 col-sm-3 col-xs-3  ml-4" style="background-color: rgb(29, 161, 242);">--}}
-        {{--                <div class="inner">--}}
-        {{--                    <h3>3</h3>--}}
 
-        {{--                    <p>تغريدة</p>--}}
-        {{--                </div>--}}
-        {{--                <div class="icon" style="color: #ffffff;">--}}
-        {{--                    <i class="fa fa-twitter"></i>--}}
-        {{--                </div>--}}
-        {{--                <a href="#" class="small-box-footer">twitte now <i class="fa fa-arrow-circle-right"></i></a>--}}
-        {{--                <a href="#" class="modalCreateTwitte pull-right " data-toggle="modal" data-target="#modalCreateTwitte"><i class="fa fa-twitter">&nbsp; تغريد في</i></a>--}}
-        {{--            </div>--}}
-        <!-- ./col -->
 
         </div>
         <form method="POST" action="{{route('message.send')}}">
@@ -91,7 +56,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12 ">
-                            {{-- <input type="text" class="form-control text-right" name="page_id" id="page_id" value="{{$ids[0]}}" placeholder="id page"> --}}
+                            {{-- todo must fixed set and get pages and ids in database  --}}
                             <select name="page_id" id="page_id" class="custom-select">
                             <?php $i=0;
                             ?>
@@ -104,17 +69,12 @@
                         </select>
                         </div>
                     </div>
-                 
-                   {{--  <div class="form-group row">
-                    </div> --}}
 
                         <button type="submit" class="btn btn-primary">ارسال</button>
                 </div>
 
             </div>
-            <!-- /.modal-content -->
-            <!-- /.modal-dialog -->
-            <!-- /.modal -->
+
             </div>
         </form>
 
