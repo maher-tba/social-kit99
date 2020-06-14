@@ -38,31 +38,18 @@ class GraphController extends Controller
 
            $fb_user = $this->api->get('/me?fields='.$params)->getGraphUser();
 
-           // $user_info=["first_name"=>$user["first_name"],"url"=>$user["picture"]["url"],"width"=>$user["picture"]["width"],"height"=>$user["picture"]["height"]];
            $user = Auth::user();
            $user->name = $fb_user['first_name'];
            $user->url = $fb_user["picture"]["url"];
-
             // end get user info
            $userPages = collect($this->retrieveUserPages());
-//           $pages = collect();
-//           $page_ids = collect();
-//           foreach($userPages as $page)
-//           {
-//               $pages->add( $page['name'] );
-//               $page_ids->add( $page['id'] );
-//           }
-//           $user->pages = $pages;
-//           $user->ids = $page_ids;
-           return $userPages->pluck('name');
+           $user->pages = $userPages->pluck('name');
+           $user->ids = $userPages->pluck('id');
            $user->save();
-           $pages = explode(".", Auth::user()->pages);
-           $ids = explode(".", Auth::user()->ids);
-           //return [ Auth::user()->pages => $ids[0]];
-           //logger('retrieveUserProfile Home.', [ Auth::user()->pages => Auth::user()->ids]);
+
            $share = Share::all();
-           return view('home',compact('pages','ids','share'));
-           return view('home' );
+           return view('home',compact('share','userPages'));
+
 
        } catch (FacebookSDKException $e) {
             dd($e);
@@ -80,8 +67,8 @@ class GraphController extends Controller
 
             $response = $this->api->get('/me/accounts', Auth::user()->token);
             $res = $response->getDecodedBody();
+
             $userPages = collect();
-            $i=0;
             foreach ($res['data'] as $page)
             {
                     $userPages->push([ 'name' => $page['name'] , 'id' => $page['id'] ]);

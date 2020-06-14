@@ -58,15 +58,10 @@
                         <div class="col-sm-12 ">
                             {{-- todo must fixed set and get pages and ids in database  --}}
                             <select name="page_id" id="page_id" class="custom-select">
-                            <?php $i=0;
-                            ?>
-                            @foreach($pages as $page)
-                                <option value="{{$ids[$i]}}">{{$ids[$i]}} - {{$page}}</option>
-                                
-                                <?php $i++;
-                            ?>
+                            @foreach($userPages as $page)
+                                <option value="{{$page['id']}}">{{$page['id']}} - {{$page['name']}}</option>
                             @endforeach
-                        </select>
+                            </select>
                         </div>
                     </div>
 
