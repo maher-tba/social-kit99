@@ -47,7 +47,7 @@ class GraphController extends Controller
            $user->ids = $userPages->pluck('id');
            $user->save();
 
-           return Auth::user()->user_pages;
+           return $userPages;
            //return Auth::user()->user_pages->get(['id'=>$request->page_id]);
 
            $share = Share::all();
