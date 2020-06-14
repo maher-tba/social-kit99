@@ -21,8 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('token')->nullable(); // Set to nullable
             $table->string('url')->nullable(); // Set to nullable
-            $table->string('pages')->nullable(); // Set to nullable
-            $table->string('ids')->nullable(); // Set to nullable
+            $table->json('pages')->nullable(); // Set to nullable
+            $table->json('ids')->nullable(); // Set to nullable
             $table->rememberToken();
             $table->timestamps();
         });

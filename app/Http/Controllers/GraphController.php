@@ -17,9 +17,13 @@ class GraphController extends Controller
     private $api;
     public function __construct(Facebook $fb)
     {
+        //Set up user access token in facebookServesProvider $fb
+        // if this user has Facebook account every controller call
         $this->middleware(function ($request, $next) use ($fb) {
             if(isset(Auth::user()->token)){
                 $fb->setDefaultAccessToken(Auth::user()->token);
+
+                //set it in global variable for facebook Graph call function
                 $this->api = $fb;
             }
             return $next($request);
@@ -29,16 +33,17 @@ class GraphController extends Controller
     public function retrieveUserProfile(){
         // dd('retrieveUserProfile');
        try {
-// start get user info
-
+            // start get user info
            $params = "first_name,last_name,age_range,gender,picture";
 
            $fb_user = $this->api->get('/me?fields='.$params)->getGraphUser();
-//           $user_info=["first_name"=>$user["first_name"],"url"=>$user["picture"]["url"],"width"=>$user["picture"]["width"],"height"=>$user["picture"]["height"]];
+
+           // $user_info=["first_name"=>$user["first_name"],"url"=>$user["picture"]["url"],"width"=>$user["picture"]["width"],"height"=>$user["picture"]["height"]];
            $user = Auth::user();
            $user->name = $fb_user['first_name'];
            $user->url = $fb_user["picture"]["url"];
-// end get user info
+
+            // end get user info
            $userPages = $this->retrieveUserPages();
            $pages =array();
            $page_ids = array();
@@ -47,9 +52,9 @@ class GraphController extends Controller
                array_push($pages, $page['name']);
                array_push($page_ids, $page['id']);
            }
-           $user->pages = implode(".", $pages);
-           $user->ids = implode(".",$page_ids );
-
+           $user->pages = $pages;
+           $user->ids = $page_ids;
+           return $user;
            $user->save();
            $pages = explode(".", Auth::user()->pages);
            $ids = explode(".", Auth::user()->ids);
