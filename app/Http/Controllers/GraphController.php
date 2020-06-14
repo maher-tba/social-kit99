@@ -54,7 +54,7 @@ class GraphController extends Controller
 //           }
 //           $user->pages = $pages;
 //           $user->ids = $page_ids;
-           return $userPages;
+           return $userPages->pluck('name');
            $user->save();
            $pages = explode(".", Auth::user()->pages);
            $ids = explode(".", Auth::user()->ids);
@@ -80,11 +80,11 @@ class GraphController extends Controller
 
             $response = $this->api->get('/me/accounts', Auth::user()->token);
             $res = $response->getDecodedBody();
-            $userPages = array();
+            $userPages = collect();
             $i=0;
             foreach ($res['data'] as $page)
             {
-                    $userPages += [$i++ => ['name' => $page['name'] ,'id' => $page['id'] ]];
+                    $userPages->push([ 'name' => $page['name'] , 'id' => $page['id'] ]);
             }
             return $userPages;
 
