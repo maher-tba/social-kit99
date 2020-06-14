@@ -44,17 +44,17 @@ class GraphController extends Controller
            $user->url = $fb_user["picture"]["url"];
 
             // end get user info
-           $userPages = $this->retrieveUserPages();
-           $pages =array();
-           $page_ids = array();
-           foreach($userPages as $page)
-           {
-               array_push($pages, $page['name']);
-               array_push($page_ids, $page['id']);
-           }
-           $user->pages = $pages;
-           $user->ids = $page_ids;
-           return $user;
+           $userPages = collect($this->retrieveUserPages());
+//           $pages = collect();
+//           $page_ids = collect();
+//           foreach($userPages as $page)
+//           {
+//               $pages->add( $page['name'] );
+//               $page_ids->add( $page['id'] );
+//           }
+//           $user->pages = $pages;
+//           $user->ids = $page_ids;
+           return $userPages->only(['name']);
            $user->save();
            $pages = explode(".", Auth::user()->pages);
            $ids = explode(".", Auth::user()->ids);
