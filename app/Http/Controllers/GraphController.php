@@ -47,6 +47,9 @@ class GraphController extends Controller
            $user->ids = $userPages->pluck('id');
            $user->save();
 
+           return Auth::user()->user_pages;
+           //return Auth::user()->user_pages->get(['id'=>$request->page_id]);
+
            $share = Share::all();
            return view('home',compact('share','userPages'));
 
@@ -118,7 +121,8 @@ class GraphController extends Controller
             $share = new Share;
             $share->share_id = $request->page_id;
             //todo get name of publish name index
-            $share->page_name = Auth::user()->pages;
+            $share->page_name = ['id'=>$request->page_id, 'name'=>'page name'];
+            //$share->page_name = Auth::user()->user_pages->get(['id'=>$request->page_id]);
             $share->data =  $request->message;
             //todo create function to attach image
             $share->attach =  "";

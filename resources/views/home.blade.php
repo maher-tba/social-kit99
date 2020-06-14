@@ -56,7 +56,6 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12 ">
-                            {{-- todo must fixed set and get pages and ids in database  --}}
                             <select name="page_id" id="page_id" class="custom-select">
                             @foreach($userPages as $page)
                                 <option value="{{$page['id']}}">{{$page['id']}} - {{$page['name']}}</option>

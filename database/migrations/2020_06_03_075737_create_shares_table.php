@@ -16,7 +16,7 @@ class CreateSharesTable extends Migration
         Schema::create('shares', function (Blueprint $table) {
             $table->increments('id');
             $table->string('share_id');
-            $table->string('page_name');
+            $table->json('page_name');
             $table->string('data')->nullable();
             $table->string('attach')->nullable();
             $table->string('social_network');
