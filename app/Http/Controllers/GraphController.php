@@ -54,7 +54,7 @@ class GraphController extends Controller
 //           }
 //           $user->pages = $pages;
 //           $user->ids = $page_ids;
-           return $userPages->only(['name']);
+           return $userPages;
            $user->save();
            $pages = explode(".", Auth::user()->pages);
            $ids = explode(".", Auth::user()->ids);
