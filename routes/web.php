@@ -18,8 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 ################## Dashboard Route ######################
 
-Route::get('/', 'GraphController@retrieveUserProfile')->middleware('auth');
-
+Route::get('/', function () {
+    return view('dashboard.index');
+});
 
 Route::get('/home', 'GraphController@retrieveUserProfile')->name('home')->middleware('auth');
 

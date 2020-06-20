@@ -31,16 +31,16 @@ class GraphController extends Controller
     }
 
     public function retrieveUserProfile(){
-        // dd('retrieveUserProfile');
        try {
             // start get user info
-           $params = "first_name,last_name,age_range,gender,picture";
+           $params = "first_name,last_name,picture";
 
            $fb_user = $this->api->get('/me?fields='.$params)->getGraphUser();
 
            $user = Auth::user();
            $user->name = $fb_user['first_name'];
            $user->url = $fb_user["picture"]["url"];
+
             // end get user info
            $userPages = collect($this->retrieveUserPages());
            $user->pages = $userPages->pluck('name');
@@ -117,7 +117,6 @@ class GraphController extends Controller
             $post = $this->api->post('/' . $request->page_id . '/feed', array('message' => $request->message), $this->getPageAccessToken($request->page_id));
 
         $post = $post->getGraphNode()->asArray();
-//        return view('home' );
             $share = new Share;
             $share->share_id = $request->page_id;
             //todo get name of publish name index

@@ -23,7 +23,6 @@ class FacebookServiceProvider extends ServiceProvider
                 'default_graph_version' => 'v7.0',
             ]);
         });
-
     }
 
 
