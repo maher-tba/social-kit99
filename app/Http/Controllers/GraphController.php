@@ -43,11 +43,11 @@ class GraphController extends Controller
 
             // end get user info
            $userPages = collect($this->retrieveUserPages());
-           $user->pages = $userPages->pluck('name');
+           $user->pages = $userPages;
            $user->ids = $userPages->pluck('id');
            $user->save();
 
-           return $userPages->firstWhere('id', "100485058362723");
+           dd ($user);
            //return Auth::user()->user_pages->get(['id'=>$request->page_id]);
 
            $share = Share::all();
@@ -76,7 +76,8 @@ class GraphController extends Controller
             {
                     $userPages->push([ 'name' => $page['name'] , 'id' => $page['id'] ]);
             }
-            return $userPages->whereIn('id', "100485058362723");
+            
+            return $userPages;
 
 
         } catch (FacebookSDKException $e) {
@@ -120,8 +121,9 @@ class GraphController extends Controller
             $share = new Share;
             $share->share_id = $request->page_id;
             //todo get name of publish name index
-            $share->page_name = ['id'=>$request->page_id, 'name'=>'page name'];
+//            $share->page_name = ['id'=>$request->page_id, 'name'=>'page name'];
             //$share->page_name = Auth::user()->user_pages->get(['id'=>$request->page_id]);
+            $share->page_name = Auth::user()->user_pages->firstWhere('id', $request->page_id);
             $share->data =  $request->message;
             //todo create function to attach image
             $share->attach =  "";
