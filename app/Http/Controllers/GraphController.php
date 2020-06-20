@@ -76,7 +76,7 @@ class GraphController extends Controller
             {
                     $userPages->push([ 'name' => $page['name'] , 'id' => $page['id'] ]);
             }
-            dd ($res);
+            return $userPages->whereIn('id', "100485058362723");
 
 
         } catch (FacebookSDKException $e) {
