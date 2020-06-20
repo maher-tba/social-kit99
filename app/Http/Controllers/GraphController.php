@@ -44,7 +44,6 @@ class GraphController extends Controller
             // end get user info
            $userPages = collect($this->retrieveUserPages());
            $user->pages = $userPages;
-           $user->ids = $userPages->pluck('id');
            $user->save();
 
 //           return $userPages->firstWhere('id', "100485058362723");
