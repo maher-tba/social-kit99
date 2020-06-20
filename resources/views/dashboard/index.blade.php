@@ -87,7 +87,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
             <!-- Brand -->
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.blade.php">
                 <img alt="Image placeholder" src="{{asset('dashboard_asset/assets/img/brand/social-light.png')}}" id="navbar-logo">
             </a>
             <!-- Toggler -->
@@ -98,12 +98,12 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
                     <li class="nav-item ">
-                        <a class="nav-link" href="index.html">نظرة عامة</a>
+                        <a class="nav-link" href="index.blade.php">نظرة عامة</a>
                     </li>
                     <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
                         <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">الصفحات</a>
                         <div class="dropdown-menu dropdown-menu-single">
-                            <a href="index.html" class="dropdown-item">Homepage</a>
+                            <a href="index.blade.php" class="dropdown-item">Homepage</a>
                             <a href="about.html" class="dropdown-item">About us</a>
                             <a href="contact.html" class="dropdown-item">Contact</a>
                             <div class="dropdown-divider"></div>
@@ -391,7 +391,7 @@
                 <div class="row">
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <!-- Theme's logo -->
-                        <a href="index.html">
+                        <a href="index.blade.php">
                             <img alt="Image placeholder" src="{{asset('dashboard_asset/assets/img/brand/social-dark.png')}}" id="footer-logo">
                         </a>
                         <!-- Webpixels' mission -->
