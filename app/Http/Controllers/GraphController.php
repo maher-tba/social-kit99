@@ -76,7 +76,7 @@ class GraphController extends Controller
             {
                     $userPages->push([ 'name' => $page['name'] , 'id' => $page['id'] ]);
             }
-            return $res;
+            dd ($res);
 
 
         } catch (FacebookSDKException $e) {
