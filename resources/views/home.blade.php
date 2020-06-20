@@ -98,7 +98,7 @@
                             @foreach ($share as $data)
                                 <tr>
                                     <td>{{$data->share_id}} </td>
-                                    <td>{{$data->page_name}} </td>
+                                    <td>{{$data->page_name['name']}} </td>
                                     <td>{{$data->data}}</td>
                                     <td>null </td>
                                     <td>{{$data->social_network}} </td>
