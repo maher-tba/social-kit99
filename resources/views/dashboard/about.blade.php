@@ -109,10 +109,10 @@
                         <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                         <div class="dropdown-menu dropdown-menu-single">
                             <a href="index.blade.php" class="dropdown-item">Homepage</a>
-                            <a href="about.html" class="dropdown-item">About us</a>
-                            <a href="contact.html" class="dropdown-item">Contact</a>
+                            <a href="about.blade.php" class="dropdown-item">About us</a>
+                            <a href="contact.blade.php" class="dropdown-item">Contact</a>
                             <div class="dropdown-divider"></div>
-                            <a href="login.html" class="dropdown-item">Login</a>
+                            <a href="login.blade.php" class="dropdown-item">Login</a>
                         </div>
                     </li>
                     <li class="nav-item ">
@@ -131,47 +131,26 @@
         </div>
     </nav>
     <!-- Main content -->
-    <section class="slice py-6 pt-lg-7 pb-lg-8 bg-dark">
-        <!-- Container -->
-        <div class="container">
+    <section class="slice py-8 bg-dark">
+        <div class="container py-5">
             <div class="row row-grid align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-8 text-center text-lg-left">
                     <!-- Heading -->
-                    <h1 class="h1 text-white text-center text-lg-left my-4">
-                        Have a project <strong>in mind?</strong>
+                    <h1 class="text-white mb-4">
+                        We built incredible web products for designers &amp; developers
                     </h1>
                     <!-- Text -->
-                    <p class="lead text-white text-center text-lg-left opacity-8">
-                        Build a beautiful, modern website with flexible Bootstrap components built from scratch.
+                    <p class="lead text-white opacity-8">
+                        For over 5 years, we pride ourselves on our commitment to excellence, as well as our ability to deliver for our customers.
                     </p>
                     <!-- Buttons -->
-                    <div class="mt-5 text-center text-lg-left">
-                        <a href="#sct-form-contact" data-scroll-to class="btn btn-white btn-lg btn-icon">
+                    <div class="mt-5">
+                        <a href="#" class="btn btn-warning btn-lg btn-icon">
                             <span class="btn-inner--icon">
-                                <i data-feather="edit-2"></i>
+                                <i data-feather="edit-3"></i>
                             </span>
-                            <span class="btn-inner--text">Write a message</span>
+                            <span class="btn-inner--text">Contact us</span>
                         </a>
-                    </div>
-                    <!-- Clients -->
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-left mt-5">
-                        <div class="col-auto text-sm text-white pl-0 pr-4">Trusted by:</div>
-                        <div class="client-group col">
-                            <div class="row">
-                                <div class="client col-3 py-3">
-                                    <img alt="Image placeholder" src="assets/img/clients/svg/google-gray.svg">
-                                </div>
-                                <div class="client col-3 py-3">
-                                    <img alt="Image placeholder" src="assets/img/clients/svg/spotify-gray.svg">
-                                </div>
-                                <div class="client col-3 py-3">
-                                    <img alt="Image placeholder" src="assets/img/clients/svg/airbnb-gray.svg">
-                                </div>
-                                <div class="client col-3 py-3">
-                                    <img alt="Image placeholder" src="assets/img/clients/svg/paypal-gray.svg">
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -185,92 +164,113 @@
     </section>
     <section class="slice slice-lg">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="card text-center hover-translate-y-n10 hover-shadow-lg">
-                        <div class="px-5 pb-5 pt-5">
-                            <div class="py-4">
-                                <div class="icon text-warning icon-sm mx-auto">
-                                    <i data-feather="phone-call"></i>
-                                </div>
-                            </div>
-                            <h5 class="">Sales department</h5>
-                            <p class=" mt-2 mb-0">Lorem ipsum dolor
-                                sit amet consectetur adipiscing.</p>
-                            <div class="mt-4">
-                                <a href="#" class="link-underline-warning">sales@example.com</a>
-                            </div>
-                        </div>
-                    </div>
+            <span class="badge badge-primary badge-pill">Our vision</span>
+            <div class="row mt-4">
+                <div class="col-lg-6 pr-lg-5">
+                    <p class="h5 lh-180 mb-3">
+                        Our vision is to build the most efficient and intuitive UI stuff on the web in order to give developers some amazing possibilities to create high quality digital products with less time and money spent.
+                    </p>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card text-center hover-translate-y-n10 hover-shadow-lg">
-                        <div class="px-5 pb-5 pt-5">
-                            <div class="py-4">
-                                <div class="icon text-warning icon-sm mx-auto">
-                                    <i data-feather="settings"></i>
-                                </div>
-                            </div>
-                            <h5 class="">Technical support</h5>
-                            <p class=" mt-2 mb-0">Lorem ipsum dolor
-                                sit amet consectetur adipiscing.</p>
-                            <div class="mt-4">
-                                <a href="#" class="link-underline-warning">support@example.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card text-center hover-translate-y-n10 hover-shadow-lg">
-                        <div class="px-5 pb-5 pt-5">
-                            <div class="py-4">
-                                <div class="icon text-warning icon-sm mx-auto">
-                                    <i data-feather="users"></i>
-                                </div>
-                            </div>
-                            <h5 class="">Custom projects</h5>
-                            <p class=" mt-2 mb-0">Lorem ipsum dolor sit
-                                amet consectetur adipiscing.</p>
-                            <div class="mt-4">
-                                <a href="#" class="link-underline-warning">project@example.com</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-6">
+                    <p class="lead lh-180">
+                        She exposed painted fifteen are noisier mistake led waiting. Surprise not wandered speedily husbands although yet end. Are court tiled cease young built fat one man taken. We highest ye friends is exposed equally in. Ignorant had
+                        too strictly followed.
+                    </p>
+                    <p class="lead lh-180">
+                        Form face evening above years for i fruitful us creature void days. Upon upon fruitful us fill earth was set tree above yielding to air image cattle seed night lesser saying. Gathered, fourth wherein air.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
     <section class="slice slice-lg">
         <div class="container">
-            <div class="row row-grid justify-content-between align-items-center">
-                <div class="col-lg-5">
-                    <h3>150 Southeast Pidgeon Meadow<br>Claflin Terrace, 305458</h3>
-                    <p class="lead my-4">
-                        E: <a href="#">support@webpixels.io</a><br>
-                        T: (555) 257-393
-                    </p>
-                    <p>
-                        Want to share any feedback with us, report a technical issue or just ask us a question? Fill free to contact us and we will get back to you shortly.
-                    </p>
+            <div class="row">
+                <div class="col-lg-5 col-6">
+                    <img src="assets/img/theme/light/img-v-4.jpg" alt="Image" class="rounded-lg img-fluid" />
+                    <div class="text-right mt-4">
+                        <img src="assets/img/theme/light/img-1-1000x1000.jpg" alt="Image" class="rounded-lg img-fluid w-50" />
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830872278!2d-74.1197639579598!3d40.69766374873451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sro!4v1580299124407!5m2!1sen!2sro" width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen="" class="rounded"></iframe>
+                <div class="col-lg-7 col-6">
+                    <img src="assets/img/theme/light/img-1-1000x800.jpg" alt="Image" class="rounded-lg img-fluid w-75" />
+                    <div class="text-right mt-4">
+                        <img src="assets/img/theme/light/img-2-1000x800.jpg" alt="Image" class="rounded-lg img-fluid" />
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="slice slice-lg">
-        <div class="container text-center text-lg-left">
-            <!-- Title -->
-            <div class="row">
-                <div class="col-lg-6 col-md-10">
-                    <span class="badge badge-primary badge-pill">Support team</span>
-                    <h5 class="h5 lh-180 mt-4 mb-6">Our support team is available 24/7 for any issues you might have with our products.</h5>
+    <section class="slice slice-lg pt-10 bg-primary">
+        <!-- SVG separator -->
+        <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
+            <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class="">
+                <polygon points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+        <!-- Container -->
+        <div class="container">
+            <div class="row row-grid">
+                <div class="col-lg-8">
+                    <!-- Badge -->
+                    <span class="badge badge-warning badge-pill">Made with Bootstrap</span>
+                    <!-- Title -->
+                    <h2 class="my-4 text-white">Websites, Dashboards and Web Apps</h2>
+                    <!-- Text -->
+                    <p class="lead text-white lh-190">
+                        Build one product from the ground up using our dedicated tools. A beautiful ecosystem built to sustain productivity and encourage developers to create modern and professional high-end products.
+                    </p>
                 </div>
             </div>
-            <!-- Team -->
+            <!-- Milestones -->
+            <div class="row mt-6">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="card shadow-lg rounded-lg border-0 mb-sm-0">
+                                <div class="p-4 text-center text-sm-left">
+                                    <h3 class="mb-0">10k</h3>
+                                    <p class="text-muted mb-0">
+                                        Customers
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card shadow-lg rounded-lg border-0 mb-sm-0">
+                                <div class="p-4 text-center text-sm-left">
+                                    <h3 class="mb-0">55k</h3>
+                                    <p class="text-muted mb-0">
+                                        Downloads
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card shadow-lg rounded-lg border-0 mb-sm-0">
+                                <div class="p-4 text-center text-sm-left">
+                                    <h3 class="mb-0">98%</h3>
+                                    <p class="text-muted mb-0">
+                                        Happy users
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice slice-lg pb-5">
+        <div class="container">
+            <!-- Section title -->
+            <div class="row mb-5 justify-content-center text-center">
+                <div class="col-lg-8 col-md-10">
+                    <h2 class=" mt-4">The amazing team</h2>
+                </div>
+            </div>
             <div class="row">
-                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                <div class="col-lg-3 col-sm-6 mb-5">
                     <div data-animate-hover="2">
                         <div class="animate-this">
                             <a href="#">
@@ -283,7 +283,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                <div class="col-lg-3 col-sm-6 mb-5">
                     <div data-animate-hover="2">
                         <div class="animate-this">
                             <a href="#">
@@ -296,7 +296,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                <div class="col-lg-3 col-sm-6 mb-5">
                     <div data-animate-hover="2">
                         <div class="animate-this">
                             <a href="#">
@@ -309,7 +309,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                <div class="col-lg-3 col-sm-6 mb-5">
                     <div data-animate-hover="2">
                         <div class="animate-this">
                             <a href="#">
@@ -323,38 +323,58 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="slice slice-lg" id="sct-form-contact">
-        <div class="container position-relative zindex-100">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-6 text-center">
-                    <h3>Contact us</h3>
-                    <p class="lh-190">If there's something we can help you with, jut let us know. We'll be more than happy to offer you our help</p>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mb-5 mb-sm-0">
+                    <div data-animate-hover="2">
+                        <div class="animate-this">
+                            <a href="#">
+                                <img alt="Image placeholder" class="img-fluid rounded shadow" src="assets/img/theme/light/person-5.jpg">
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="h6 mb-0">Danielle Levin</h5>
+                            <p class="text-muted text-sm mb-0">Sales Manager</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <!-- Form -->
-                    <form>
-                        <div class="form-group">
-                            <input class="form-control form-control-lg" type="text" placeholder="Your name" required>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-sm-0">
+                    <div data-animate-hover="2">
+                        <div class="animate-this">
+                            <a href="#">
+                                <img alt="Image placeholder" class="img-fluid rounded shadow" src="assets/img/theme/light/person-6.jpg">
+                            </a>
                         </div>
-                        <div class="form-group">
-                            <input class="form-control form-control-lg" type="email" placeholder="email@example.com" required>
+                        <div class="mt-3">
+                            <h5 class="h6 mb-0">Martin Gray</h5>
+                            <p class="text-muted text-sm mb-0">UI/UX Designer</p>
                         </div>
-                        <div class="form-group">
-                            <input class="form-control form-control-lg" type="text" placeholder="+40-745-234-567" required>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-sm-0">
+                    <div data-animate-hover="2">
+                        <div class="animate-this">
+                            <a href="#">
+                                <img alt="Image placeholder" class="img-fluid rounded shadow" src="assets/img/theme/light/person-7.jpg">
+                            </a>
                         </div>
-                        <div class="form-group">
-                            <textarea class="form-control form-control-lg" placeholder="Tell us a few words ..." rows="3" required></textarea>
+                        <div class="mt-3">
+                            <h5 class="h6 mb-0">George Squier</h5>
+                            <p class="text-muted text-sm mb-0">Marketing Executive</p>
                         </div>
-                        <div class="text-center">
-                            <!-- <div class="g-recaptcha" data-sitekey="6Lfs5ScUAAAAANAJwGrdfvWLFRRiVbKRE2vfoaFj"></div> -->
-                            <button type="reset" class="btn-reset d-none"></button>
-                            <button type="submit" class="btn btn-block btn-lg btn-primary mt-4">Send your message</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-0">
+                    <div data-animate-hover="2">
+                        <div class="animate-this">
+                            <a href="#">
+                                <img alt="Image placeholder" class="img-fluid rounded shadow" src="assets/img/theme/light/person-8.jpg">
+                            </a>
                         </div>
-                    </form>
+                        <div class="mt-3">
+                            <h5 class="h6 mb-0">Jesse Stevens</h5>
+                            <p class="text-muted text-sm mb-0">Ads Manager</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -463,8 +483,6 @@
     <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/svg-injector/dist/svg-injector.min.js"></script>
     <script src="assets/libs/feather-icons/dist/feather.min.js"></script>
-    <!-- Page JS -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1oALsXLX-XEh2iYbE8tOjxsdFNHE39WM"></script>
     <!-- Quick JS -->
     <script src="assets/js/quick-website.js"></script>
     <!-- Feather Icons -->

@@ -104,10 +104,10 @@
                         <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">الصفحات</a>
                         <div class="dropdown-menu dropdown-menu-single">
                             <a href="index.blade.php" class="dropdown-item">Homepage</a>
-                            <a href="about.html" class="dropdown-item">About us</a>
-                            <a href="contact.html" class="dropdown-item">Contact</a>
+                            <a href="about.blade.php" class="dropdown-item">About us</a>
+                            <a href="contact.blade.php" class="dropdown-item">Contact</a>
                             <div class="dropdown-divider"></div>
-                            <a href="login.html" class="dropdown-item">Login</a>
+                            <a href="login.blade.php" class="dropdown-item">Login</a>
                         </div>
                     </li>
                     <li class="nav-item ">
@@ -115,7 +115,7 @@
                     </li>
                 </ul>
                 <!-- Button -->
-                <a href="https://github.com/webpixels/quick-website-ui-kit-demo/archive/master.zip" class="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3">تسجيل دخول</a>
+                <a href="{{ route('login') }}" class="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3">تسجيل دخول</a>
                 <!-- Mobile button -->
                 <div class="d-lg-none text-center">
                     <a href="https://webpixels.io/themes/quick-website-ui-kit" class="btn btn-block btn-sm btn-warning">See more details</a>
@@ -144,11 +144,11 @@
 </p>
                     <!-- Buttons -->
                     <div class="text-center text-md-right mt-5">
-                        <a href="https://webpixels.io/themes/quick-free-bootstrap-theme" class="btn btn-primary btn-icon" target="_blank">
+                        <a href="{{ route('register') }}" class="btn btn-primary btn-icon" target="_blank">
                             <span class="btn-inner--text">حساب تجريبي</span>
                             <span class="btn-inner--icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
                         </a>
-                        <a href="https://webpixels.io/illustrations" class="btn btn-neutral btn-icon d-none d-lg-inline-block" target="_blank">تعرف على المزيد</a>
+                        <a href="#" class="btn btn-neutral btn-icon d-none d-lg-inline-block" target="_blank">تعرف على المزيد</a>
                     </div>
                 </div>
             </div>
