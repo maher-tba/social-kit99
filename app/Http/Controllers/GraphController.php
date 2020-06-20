@@ -123,7 +123,7 @@ class GraphController extends Controller
             //todo get name of publish name index
 //            $share->page_name = ['id'=>$request->page_id, 'name'=>'page name'];
             //$share->page_name = Auth::user()->user_pages->get(['id'=>$request->page_id]);
-            dd($request->page_id->toArray());
+            dd($request->page_id[0]->toArray());
             $share->page_name = Auth::user()->pages->whereIn('id', $request->page_id);
             $share->data =  $request->message;
             //todo create function to attach image
