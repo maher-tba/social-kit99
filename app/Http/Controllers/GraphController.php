@@ -124,7 +124,7 @@ class GraphController extends Controller
 //            $share->page_name = ['id'=>$request->page_id, 'name'=>'page name'];
             //$share->page_name = Auth::user()->user_pages->get(['id'=>$request->page_id]);
             $collection = collect($request->page_id);
-            dd($collection->whereIn('id', $request->page_id));
+            dd($collection->firstWhere('id', $request->page_id));
             $share->page_name = Auth::user()->pages->whereIn('id', $request->page_id);
             $share->data =  $request->message;
             //todo create function to attach image
