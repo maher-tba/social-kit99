@@ -47,7 +47,7 @@ class GraphController extends Controller
            $user->ids = $userPages->pluck('id');
            $user->save();
 
-//           dd ($user);
+//           return $userPages->firstWhere('id', "100485058362723");
            //return Auth::user()->user_pages->get(['id'=>$request->page_id]);
 
            $share = Share::all();
@@ -123,7 +123,7 @@ class GraphController extends Controller
             //todo get name of publish name index
 //            $share->page_name = ['id'=>$request->page_id, 'name'=>'page name'];
             //$share->page_name = Auth::user()->user_pages->get(['id'=>$request->page_id]);
-            $share->page_name = Auth::user()->pages->firstWhere('id', $request->page_id);
+            $share->page_name = Auth::user()->pages->whereIn('id', $request->page_id);
             $share->data =  $request->message;
             //todo create function to attach image
             $share->attach =  "";
