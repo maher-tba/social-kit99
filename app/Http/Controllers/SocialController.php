@@ -18,11 +18,12 @@ class SocialController extends Controller
         return Socialite::driver($service)->redirect();
     }
 
-    public function callback($provider = "facebook"){
+    public function callback($provider){
         // get response from Facebook or twitter or etc "$service" to init Socialite,
         //We need from response now access to protected method to get User information 'stateless()'
-        $providerUser = Socialite::driver($provider)->stateless()->user() ;
-
+        $provider = Socialite::driver($provider);
+        dd($provider);
+        $providerUser = $provider->stateless()->user() ;
         // get or create user from database
         $user = $this->createOrGetUser($provider, $providerUser);
 
@@ -46,6 +47,7 @@ class SocialController extends Controller
         } else {
             //before create social
             //get user from db
+            //todo optimize scenario
             $user = User::whereEmail($providerUser->getEmail())->first();
             if (!$user) {
                 $user = User::create([
